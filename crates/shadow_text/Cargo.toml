@@ -1,0 +1,12 @@
+[package]
+name = "shadow_text"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+fnv = { workspace = true }
+indexmap = { workspace = true }
+serde = { workspace = true }
