@@ -14,7 +14,7 @@ Shadow Machine Learning Framework
 
 # Installation:
 ## Pre-Requirements:
-- Latest [rust]() version for running this framework (or) using this application.
+- Latest [rust](https://www.rust-lang.org/tools/install) version for running this framework (or) using this application.
 - macOS/Windows/Linux.
 - 4+ GiB RAM
 - 10+ GiB Internal Storage
