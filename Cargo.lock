@@ -1502,6 +1502,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "shadow_number_formatter"
+version = "0.1.0"
+dependencies = [
+ "num",
+ "serde",
+]
+
+[[package]]
 name = "shadow_progress_counter"
 version = "0.1.0"
 dependencies = [
