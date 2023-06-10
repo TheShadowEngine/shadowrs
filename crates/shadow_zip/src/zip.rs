@@ -1,5 +1,3 @@
-use crate::zip;
-
 #[macro_export]
 macro_rules! zip {
 	(@map $p:pat => $t:expr) => {
