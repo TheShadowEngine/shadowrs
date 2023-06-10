@@ -1,0 +1,29 @@
+[package]
+name = "shadow_build"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "shadow_build"
+path = "src/main.rs"
+
+[dependencies]
+cbindgen = { workspace = true }
+chrono = { workspace = true }
+clap = { workspace = true }
+digest = { workspace = true }
+dirs = { workspace = true }
+duct = { workspace = true }
+flate2 = { workspace = true }
+hex = { workspace = true }
+indoc = { workspace = true }
+md-5 = { workspace = true }
+rayon = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha-1 = { workspace = true }
+sha2 = { workspace = true }
+tar = { workspace = true }
+tempfile = { workspace = true }
+url = { workspace = true }
