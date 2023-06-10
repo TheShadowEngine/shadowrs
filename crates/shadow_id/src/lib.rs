@@ -1,5 +1,3 @@
-use std::fmt::write;
-
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
 pub struct Id(u128);
 
@@ -15,7 +13,7 @@ pub struct ParseIdError;
 
 impl std::fmt::Display for ParseIdError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "Error: parse id error")
+        write!(f, "parse id error")
     }
 }
 
@@ -32,3 +30,50 @@ impl std::str::FromStr for Id {
         Ok(id)
     }
 }
+
+impl std::fmt::Display for Id {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{:032x?}", self.0)
+    }
+}
+
+impl serde::Serialize for Id {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: serde::Serializer,
+    {
+        serializer.serialize_str(&self.to_string())
+    }
+}
+
+struct IdVisitor;
+
+impl<'de> serde::de::Visitor<'de> for IdVisitor {
+    type Value = Id;
+    fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
+        formatter.write_str("a string")
+    }
+    fn visit_str<E>(self, value: &str) -> Result<Self::Value, E>
+    where
+        E: serde::de::Error,
+    {
+        value.parse().map_err(|_| E::custom("invalid id"))
+    }
+}
+
+impl<'de> serde::Deserialize<'de> for Id {
+    fn deserialize<D>(deserializer: D) -> Result<Id, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        deserializer.deserialize_str(IdVisitor)
+    }
+}
+
+// #[test]
+// fn test_parse() {
+//     let s = "00000000000000000000000000000000";
+//     assert_eq!(s.parse::<Id>().unwrap().to_string(), s);
+//     let s = "0000000000000000000000000000000z";
+//     assert!(s.parse::<Id>().is_err());
+// }

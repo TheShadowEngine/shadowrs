@@ -93,3 +93,7 @@ wasm-bindgen = "0.2"
 web-sys = "0.3"
 winapi = "0.3"
 zip = "0.6"
+
+shadow_zip = {path = "crates/shadow_zip"}
+shadow_id = {path = "crates/shadow_id"}
+shadow_progress_counter = {path = "crates/shadow_progress_counter"}
