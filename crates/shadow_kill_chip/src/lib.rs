@@ -1,14 +1,20 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+use std::sync::atomic::{AtomicBool, Ordering};
+
+pub struct KillChip(AtomicBool);
+
+impl KillChip {
+    #[must_use]
+    pub const fn new() -> Self {
+        KillChip(AtomicBool::new(false))
+    }
+
+    pub fn activate(&self) -> bool {
+        self.0.swap(true, Ordering::SeqCst)
+    }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl Default for KillChip {
+    fn default() -> Self {
+        KillChip(AtomicBool::new(false))
     }
 }
