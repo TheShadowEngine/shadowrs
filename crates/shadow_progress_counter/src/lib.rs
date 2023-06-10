@@ -27,4 +27,13 @@ impl ProgressCounter {
     pub fn get(&self) -> u64 {
         self.current.load(Ordering::Relaxed)
     }
+
+    #[must_use]
+    pub fn set(&self, value: u64) {
+        self.current.store(value, Ordering::Relaxed);
+    }
+
+    pub fn inc(&self, amount: u64) {
+        self.current.fetch_add(amount, Ordering::Relaxed);
+    }
 }
