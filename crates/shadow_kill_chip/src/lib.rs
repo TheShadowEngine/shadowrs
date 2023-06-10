@@ -11,6 +11,10 @@ impl KillChip {
     pub fn activate(&self) -> bool {
         self.0.swap(true, Ordering::SeqCst)
     }
+
+    pub fn is_activate(&self) -> bool {
+        self.0.load(Ordering::SeqCst)
+    }
 }
 
 impl Default for KillChip {
