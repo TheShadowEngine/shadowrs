@@ -1,0 +1,17 @@
+[package]
+name = "shadow_serve"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+backtrace = { workspace = true }
+futures = { workspace = true }
+hyper = { workspace = true, features = ["http1", "server", "tcp"] }
+tokio = { workspace = true }
+tracing = { workspace = true }
+
+shadow_id = { workspace = true }
