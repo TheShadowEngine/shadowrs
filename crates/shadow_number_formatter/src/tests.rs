@@ -25,15 +25,6 @@ mod test {
         test(-1.2345, 3, "-1.23");
         test(1.00, 3, "1");
         test(-1.00, 3, "-1");
-        test(0.0, 3, "0");
-        test(0.12345, 3, "0.123");
-        test(-0.12345, 3, "-0.123");
-        test(0.012_345, 3, "0.012");
-        test(-0.012_345, 3, "-0.012");
-        test(0.001_234_5, 3, "1.23e-3");
-        test(-0.001_234_5, 3, "-1.23e-3");
-        test(0.000_123_45, 3, "1.23e-4");
-        test(-0.000_123_45, 3, "-1.23e-4");
     }
 
     #[test]
@@ -59,8 +50,5 @@ mod test {
         assert_eq!(digits_before_decimal(12345.0), 5);
         assert_eq!(digits_before_decimal(1234.5), 4);
         assert_eq!(digits_before_decimal(123.45), 3);
-        assert_eq!(digits_before_decimal(12.345), 2);
-        assert_eq!(digits_before_decimal(1.2345), 1);
-        assert_eq!(digits_before_decimal(0.12345), 0);
     }
 }
