@@ -99,3 +99,4 @@ shadow_id = {path = "crates/shadow_id"}
 shadow_progress_counter = {path = "crates/shadow_progress_counter"}
 shadow_serve = {path = "crates/shadow_serve"}
 shadow_finite = {path = "crates/shadow_finite"}
+shadow_kill_chip = {path = "crates/shadow_kill_chip"}

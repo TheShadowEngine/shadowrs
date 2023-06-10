@@ -1477,6 +1477,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "shadow_kill_chip"
+version = "0.1.0"
+
+[[package]]
 name = "shadow_license"
 version = "1.0.0"
 dependencies = [
