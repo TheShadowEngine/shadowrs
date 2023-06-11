@@ -1,0 +1,17 @@
+[package]
+name = "shadow_metrics"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+itertools = { workspace = true }
+ndarray = { workspace = true }
+num = { workspace = true }
+shadow_zip = { workspace = true }
+
+
+[dev-dependencies]
+insta = { workspace = true }
