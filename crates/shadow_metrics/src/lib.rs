@@ -1,4 +1,5 @@
 mod accuracy;
+mod cross_entropy;
 mod mean;
 mod mean_errors;
 mod mean_variance;
