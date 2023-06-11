@@ -1,4 +1,5 @@
 mod accuracy;
+mod binary_classification;
 mod cross_entropy;
 mod mean;
 mod mean_errors;
