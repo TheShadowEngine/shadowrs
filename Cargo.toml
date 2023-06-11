@@ -104,3 +104,5 @@ shadow_text = {path = "crates/shadow_text"}
 shadow_number_formatter = {path = "crates/shadow_number_formatter"}
 shadow_metrics = {path = "crates/shadow_metrics"}
 shadow_license = {path = "crates/shadow_license"}
+shadow_features = {path = "crates/shadow_features"}
+shadow_table = {path = "crates/shadow_table"}
