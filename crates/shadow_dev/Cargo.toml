@@ -1,0 +1,13 @@
+[package]
+name = "shadow_dev"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "shadow_dev"
+path = "src/main.rs"
+
+[dependencies]
+clap = { workspace = true }
+sunfish = { workspace = true }
+tokio = { workspace = true }
