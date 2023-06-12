@@ -2103,6 +2103,23 @@ dependencies = [
 [[package]]
 name = "shadow_tree"
 version = "1.0.0"
+dependencies = [
+ "bitvec",
+ "buffalo",
+ "clap",
+ "itertools",
+ "ndarray",
+ "num",
+ "rayon",
+ "serde",
+ "serde_json",
+ "shadow_finite",
+ "shadow_kill_chip",
+ "shadow_metrics",
+ "shadow_progress_counter",
+ "shadow_table",
+ "shadow_zip",
+]
 
 [[package]]
 name = "shadow_wheel_writer"
