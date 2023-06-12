@@ -107,3 +107,4 @@ shadow_license = {path = "crates/shadow_license"}
 shadow_features = {path = "crates/shadow_features"}
 shadow_table = {path = "crates/shadow_table"}
 shadow_linear = {path = "crates/shadow_linear"}
+shadow_tree = {path = "crates/shadow_tree"}
