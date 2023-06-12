@@ -1,0 +1,27 @@
+[package]
+name = "shadow_wheel_writer"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "wheel_writer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wheel_writer"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+base64 = { workspace = true }
+clap = { workspace = true }
+digest = { workspace = true }
+indoc = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true }
+sha2 = { workspace = true }
+textwrap = { workspace = true }
+time = { workspace = true }
+toml = { workspace = true }
+walkdir = { workspace = true }
+zip = { workspace = true }
