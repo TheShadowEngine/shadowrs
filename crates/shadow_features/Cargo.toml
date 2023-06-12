@@ -1,0 +1,20 @@
+[package]
+name = "shadow_features"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+fnv = { workspace = true }
+indexmap = { workspace = true }
+itertools = { workspace = true }
+ndarray = { workspace = true }
+num = { workspace = true }
+serde = { workspace = true }
+shadow_metrics = { workspace = true }
+shadow_table = { workspace = true }
+shadow_text = { workspace = true }
+shadow_zip = { workspace = true }
