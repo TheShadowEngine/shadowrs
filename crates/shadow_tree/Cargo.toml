@@ -3,6 +3,7 @@ name = "shadow_tree"
 version = "1.0.0"
 edition = "2021"
 
+[dependencies]
 bitvec = { workspace = true }
 buffalo = { workspace = true }
 clap = { workspace = true }
