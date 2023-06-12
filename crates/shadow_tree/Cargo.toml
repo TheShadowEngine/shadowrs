@@ -1,0 +1,21 @@
+[package]
+name = "shadow_tree"
+version = "1.0.0"
+edition = "2021"
+
+bitvec = { workspace = true }
+buffalo = { workspace = true }
+clap = { workspace = true }
+itertools = { workspace = true }
+ndarray = { workspace = true }
+num = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+shadow_finite = { workspace = true }
+shadow_kill_chip = { workspace = true }
+shadow_metrics = { workspace = true }
+shadow_progress_counter = { workspace = true }
+shadow_table = { workspace = true }
+shadow_zip = { workspace = true }
