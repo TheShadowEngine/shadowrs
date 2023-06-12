@@ -1,6 +1,7 @@
 use bitvec::prelude::*;
 use shadow_progress_counter::ProgressCounter;
 
+pub mod compute_binning_instructions;
 #[cfg(feature = "timing")]
 mod timing;
 
