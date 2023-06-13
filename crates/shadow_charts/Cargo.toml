@@ -1,0 +1,19 @@
+[package]
+name = "shadow_charts"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+futures = { workspace = true }
+itertools = { workspace = true }
+pinwheel = { workspace = true }
+num = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+wasm-bindgen = { workspace = true, features = ["serde-serialize"] }
+shadow_number_formatter = { workspace = true }
+shadow_finite = { workspace = true }
