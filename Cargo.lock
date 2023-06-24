@@ -2319,6 +2319,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "shadow_model"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "buffalo",
+ "fnv",
+ "num",
+ "shadow_linear",
+ "shadow_text",
+ "shadow_tree",
+]
+
+[[package]]
 name = "shadow_number_formatter"
 version = "1.0.0"
 dependencies = [
