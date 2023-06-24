@@ -17,3 +17,4 @@ tracing = { workspace = true }
 wasm-bindgen = { workspace = true, features = ["serde-serialize"] }
 shadow_number_formatter = { workspace = true }
 shadow_finite = { workspace = true }
+web-sys = "0.3.64"

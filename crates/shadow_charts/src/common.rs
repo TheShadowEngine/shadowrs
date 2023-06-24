@@ -2,7 +2,6 @@ use super::charts_config::{ChartColors, ChartConfig};
 use shadow_number_formatter::NumberFormatter;
 use num::ToPrimitive;
 use std::borrow::Cow;
-use web_sys as dom;
 
 #[allow(clippy::struct_excessive_bools)]
 #[derive(Clone, Copy)]
